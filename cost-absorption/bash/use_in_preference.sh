@@ -1,7 +1,7 @@
 curl -X POST \
 -H "accept: application/json" \
 -H "content-type: application/json" \
-"https://api.mercadolibre.com/checkout/preferences?access_token=$ACCESS_TOKEN" \
+"https://api.mercadopago.com/checkout/preferences?access_token=ACCESS_TOKEN" \
 -d '{
 	"items": [
 		...
