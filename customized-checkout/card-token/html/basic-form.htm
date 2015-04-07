@@ -1,6 +1,5 @@
-<form action="pay" method="post" id="pay" name="pay" >
+<form action="" method="post" id="pay" name="pay" >
     <fieldset>
-        <legend> Pay in 1 installment</legend>
         <ul>
             <li>
                 <label for="email">Email</label>
@@ -8,7 +7,7 @@
             </li>
             <li>
                 <label for="cardNumber">Credit card number:</label> 
-                <input type="text" id="cardNumber" data-checkout="cardNumber" placeholder="4509 9535 6623 3704" /> <label id="issuer" style="display:none" for="issuers"><select  id="issuers" name="issuers"></select></label>                
+                <input type="text" id="cardNumber" data-checkout="cardNumber" placeholder="4509 9535 6623 3704" />
             </li>
             <li>
                 <label for="securityCode">Security code:</label> 
@@ -32,11 +31,9 @@
             </li>
             <li>
                 <label for="docNumber">Document number:</label> 
-                <input type="text"  id="docNumber" data-checkout="docNumber" placeholder="25755291" />
+                <input type="text"  id="docNumber" data-checkout="docNumber" placeholder="12345678" />
             </li>           
         </ul>
-
-        <input type="hidden" value="" data-checkout="amount"/>
         <input type="submit" value="Pay!" />
     </fieldset>
 </form>
