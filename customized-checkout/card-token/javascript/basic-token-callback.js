@@ -6,7 +6,7 @@ function sdkResponseHandler(status, response) {
         var form = document.querySelector('#pay');
 
         var card = document.createElement('input');
-        card.setAttribute('name',"card");
+        card.setAttribute('name',"token");
         card.setAttribute('type',"hidden");
         card.setAttribute('value',response.id);
         form.appendChild(card);

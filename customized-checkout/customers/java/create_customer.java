@@ -5,8 +5,8 @@ public class MyClass {
 	public static void main (String args[]) {
 		MP mp = new MP ("ACCESS_TOKEN");
 
-		JSONObject payment = mp.get ("/v1/payments/[ID]");
+		JSONObject customer = mp.post ("/v1/customers", "{'email': 'test@test.com'}");
 
-		System.out.println(payment.toString());
+		System.out.println(customer.toString());
 	}
 }
