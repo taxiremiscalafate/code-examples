@@ -1,0 +1,24 @@
+{
+    "id": "ff8080814c11e280014c22852fec18b2",
+    "public_key": "444a9ef5-8a6b-429f-abdf-587639155d88",
+    "card_id": null,
+    "luhn_validation": true,
+    "status": "active",
+    "used_date": null,
+    "card_number_length": 16,
+    "creation_date": "2015-03-16T08:18:16.171-04:00",
+    "trunc_card_number": "450995XXXXXX3704",
+    "security_code_length": 3,
+    "expiration_month": 4,
+    "expiration_year": 2016,
+    "last_modified_date": "2015-03-16T08:18:16.171-04:00",
+    "cardholder": {
+        "identification": {
+            "subtype": null,
+            "number": "23456789",
+            "type": "DNI"
+        },
+        "name": "name"
+    },
+    "due_date": "2015-03-24T08:18:16.172-04:00"
+}
