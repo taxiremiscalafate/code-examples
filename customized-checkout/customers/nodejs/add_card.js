@@ -2,12 +2,20 @@ var MP = require ("mercadopago");
 
 var mp = new MP ("ACCESS_TOKEN");
 
-var addCard = mp.post ("/v1/customers/[CUSTOMER_ID]/cards", {"token": "ff8080814c11e237014c1ff593b57b4d"});
+var customer = {
+    "email": "your.payer@email"
+}
 
-addCard.then (
-    function (cardData) {
-        console.log (cardData);
-    },
-    function (error) {
-        console.log (error);
-    });
+saved_customer = mp.get ("/v1/customers/search", customer);
+
+saved_customer.then (function (customer) {
+		var addCard = mp.post ("/v1/customers/"+customer.response.id+"/cards", {"token": "ff8080814c11e237014c1ff593b57b4d"});
+
+		addCard.then (
+			function (cardData) {
+				console.log (cardData);
+			},
+			function (error) {
+				console.log (error);
+			});
+	});
