@@ -3,7 +3,7 @@
 <%@page import="org.codehaus.jettison.json.JSONObject"%>
 
 <%
-	MP mp = new MP("SELLER_AT"); // seller access_token
+	MP mp = new MP("SELLER_AT"); /* seller access_token */
 
 	String preferenceData = "{'items':"+
 		"[{"+
@@ -14,7 +14,7 @@
 			"'currency_id':'CURRENCY_ID',"+
 			"'picture_url':'https://www.mercadopago.com/org-img/MP3/home/logomp3.gif'"+
 		"}],"+
-		"'marketplace_fee':2.29"+ // fee to collect
+		"'marketplace_fee':2.29"+ /* fee to collect */
 	"}";
 
 	JSONObject preference = mp.createPreference(preferenceData);
