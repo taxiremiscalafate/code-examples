@@ -1,4 +1,6 @@
 import mercadopago.MP;
+import java.util.Map;
+import java.util.HashMap;
 import org.codehaus.jettison.json.JSONObject;
 import org.codehaus.jettison.json.JSONArray;
 
