@@ -1,13 +1,27 @@
 [
     {
-        "id": "pagofacil",
-        "name": "Pago Fácil",
+        "id": "rapipago",
+        "name": "Rapipago",
         "payment_type_id": "ticket",
         "status": "active",
-        "secure_thumbnail": "https://www.mercadopago.com/org-img/MP3/API/logos/2001.gif",
-        "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/2001.gif",
+        "secure_thumbnail": "https://www.mercadopago.com/org-img/MP3/API/logos/2002.gif",
+        "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/2002.gif",
         "deferred_capture": "does_not_apply",
         "settings": [],
-        "additional_info_needed": null
+        "additional_info_needed": []
+    },
+    {
+        "id": "redlink",
+        "name": "RedLink",
+        "payment_type_id": "atm",
+        "status": "active",
+        "secure_thumbnail": "https://www.mercadopago.com/org-img/MP3/API/logos/2003.gif",
+        "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/2003.gif",
+        "deferred_capture": "does_not_apply",
+        "settings": [],
+        "additional_info_needed": []
+    },
+    {
+        "...": "..."
     }
 ]
