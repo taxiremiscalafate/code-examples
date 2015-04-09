@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'rack'
-require 'mercadopago.rb'
+require 'mercadopago'
 
 class IPN
   def call(env)
