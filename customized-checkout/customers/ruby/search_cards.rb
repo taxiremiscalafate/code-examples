@@ -2,10 +2,6 @@ require 'mercadopago.rb'
 
 $mp = MercadoPago.new('ACCESS_TOKEN')
 
-$filters = Hash [
-    "email" => "your.payer@email"
-]
+$cards = $mp.get ("/v1/customers/[CUSTOMER_ID]/cards");
 
-$customer = $mp.get ("/v1/customers/search", $filters);
-
-puts ($customer["response"]["cards"])
+puts ($cards["response"])

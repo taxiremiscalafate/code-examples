@@ -2,10 +2,6 @@ import mercadopago
 
 mp = mercadopago.MP("ACCESS_TOKEN")
 
-filters = {
-    "email": "your.payer@email"
-}
+cards = mp.get ("/v1/customers/[CUSTOMER_ID]/cards");
 
-customer = mp.get ("/v1/customers/search", filters);
-
-print customer["response"]["cards"]
+print cards["response"]

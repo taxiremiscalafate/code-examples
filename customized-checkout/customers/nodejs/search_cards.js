@@ -2,14 +2,10 @@ var MP = require ("mercadopago");
 
 var mp = new MP ("ACCESS_TOKEN");
 
-var filters = {
-    "email": "your.payer@email"
-}
+var searchCards = mp.get ("/v1/customers/[CUSTOMER_ID]/cards");
 
-var customer = mp.get ("/v1/customers/search", filters);
-
-customer.then (function (customer) {
-		console.log (customer.response.cards);
+searchCards.then (function (cards) {
+		console.log (cards);
 	},
 	function (error) {
 		console.log (error);

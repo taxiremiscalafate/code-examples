@@ -1,14 +1,9 @@
 <?php
-
 require_once ('mercadopago.php');
 
 $mp = new MP ("ACCESS_TOKEN");
 
-$filters = array (
-    "email" => "your.payer@email"
-);
+$cards = $mp->get ("/v1/customers/[CUSTOMER_ID]/cards");
 
-$customer = $mp->get ("/v1/customers/search", $filters);
-
-print_r ($customer["response"]["cards"]);
+print_r ($cards["response"]);
 ?>

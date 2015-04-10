@@ -6,11 +6,8 @@ public class MyClass {
 	public static void Main () {
 		MP mp = new MP("ACCESS_TOKEN");
 
-		Dictionary<String, String> filters = new Dictionary<String, String> ();
-		filters.Add("email", "your.payer@email");
+		Hashtable cards = mp.get ("/v1/customers/[CUSTOMER_ID]/cards");
 
-		Hashtable customer = mp.get ("/v1/customers/search", filters);
-
-		Console.WriteLine (customer["response"]["cards"].ToString());
+		Console.WriteLine (cards["response"].ToString());
 	}
 }
