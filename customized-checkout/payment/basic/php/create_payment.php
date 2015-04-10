@@ -1,7 +1,7 @@
 <?php
 require_once ('mercadopago.php');
 
-$mp = new MP('CLIENT_ID', 'CLIENT_SECRET');
+$mp = new MP('ACCESS_TOKEN');
 
 $payment_data = array(
 	"transaction_amount'" => 100,

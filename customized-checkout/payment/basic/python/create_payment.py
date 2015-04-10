@@ -1,7 +1,7 @@
 import mercadopago
 import json
 
-mp = mercadopago.MP("CLIENT_ID", "CLIENT_SECRET")
+mp = mercadopago.MP("ACCESS_TOKEN")
 
 payment = mp.post("/v1/payments", {
         "transaction_amount": 100,

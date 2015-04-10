@@ -3,7 +3,7 @@ using System.Collections;
 
 public class MyClass {
 	public static void Main () {
-		MP mp = new MP("CLIENT_ID", "CLIENT_SECRET");
+		MP mp = new MP("ACCESS_TOKEN");
 
 		Hashtable payment = mp.post("/v1/payments", "{"+
 			"'transaction_amount': 100,"+

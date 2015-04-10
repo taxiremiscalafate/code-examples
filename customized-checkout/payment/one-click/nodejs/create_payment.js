@@ -1,6 +1,6 @@
 var MP = require ("mercadopago");
 
-var mp = new MP ("CLIENT_ID", "CLIENT_SECRET");
+var mp = new MP ("ACCESS_TOKEN");
 
 var doPayment = mp.post ("/v1/payments",
 	{

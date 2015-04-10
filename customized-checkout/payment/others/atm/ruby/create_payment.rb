@@ -1,6 +1,6 @@
 require 'mercadopago.rb'
 
-$mp = MercadoPago.new('CLIENT_ID', 'CLIENT_SECRET')
+$mp = MercadoPago.new('ACCESS_TOKEN')
 
 paymentData = Hash[
 		"transaction_amount'" => 100,

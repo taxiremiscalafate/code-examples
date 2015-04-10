@@ -3,7 +3,7 @@ import org.codehaus.jettison.json.JSONObject;
 
 public class MyClass {
 	public static void main (String args[]) {
-		MP mp = new MP("CLIENT_ID", "CLIENT_SECRET");
+		MP mp = new MP("ACCESS_TOKEN");
 
 		JSONObject payment = mp.post("/v1/payments", "{"+
 			"'transaction_amount': 100,"+
