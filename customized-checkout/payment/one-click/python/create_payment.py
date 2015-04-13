@@ -8,7 +8,6 @@ payment = mp.post("/v1/payments", {
         "token": "ff8080814c11e237014c1ff593b57b4d",
         "description": "Title of what you are paying for",
         "installments": 1,
-        "payment_method_id": "visa",
         "payer": {
             "id": 178096989,
             "type": "customer"
