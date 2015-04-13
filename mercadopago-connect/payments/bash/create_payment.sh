@@ -11,5 +11,5 @@ curl -X POST \
 			"id": 178096989,
 			"type": "customer"
 		},
-    		"application_fee": 2.56
+		"application_fee": 2.56
 	}'
