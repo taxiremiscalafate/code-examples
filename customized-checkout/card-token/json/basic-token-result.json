@@ -1,6 +1,6 @@
 {
     "id": "ff8080814cbd77a8014cc",
-    "public_key": "TEST-87bded73-a98a-422c-bec",
+    "public_key": "PUBLIC_KEY",
     "card_id": null,
     "luhn_validation": true,
     "status": "active",
@@ -18,7 +18,7 @@
     "cardholder": {
         "identification": {
             "number": "23456789",
-            "type": "DNI"
+            "type": "type"
         },
         "name": "name"
     }
