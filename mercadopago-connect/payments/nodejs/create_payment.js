@@ -12,7 +12,8 @@ var doPayment = mp.post ("/v1/payments",
 			"id": 178096989,
 			"type": "customer"
 		},
-    		"application_fee": 2.56
+		"payment_method_id": "visa",
+		"application_fee": 2.56
 	});
 
 doPayment.then (
