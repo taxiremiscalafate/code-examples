@@ -1,7 +1,6 @@
 function getBin() {
     var ccNumber = document.querySelector('input[data-checkout="cardNumber"]');
     return ccNumber.value.replace(/[ .-]/g, '').slice(0, 6);
-
 };
 
 function guessingPaymentMethod(event) {
@@ -23,7 +22,6 @@ function guessingPaymentMethod(event) {
         }, 100);
     }
 };
-
 
 function setPaymentMethodInfo(status, response) {
     if (status == 200) {
