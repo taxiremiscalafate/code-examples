@@ -9,8 +9,7 @@ $payment_data = array(
 	"description'" => "Title of what you are paying for",
 	"installments'" => 1,
 	"payer'" => array (
-		"id" => 178096989,
-		"type" => "customer"
+		"id" => "12345678"
 	)
 );
 
