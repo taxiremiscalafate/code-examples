@@ -11,7 +11,7 @@ function clearOptions() {
     var bin = getBin();
     if (bin.length == 0) {
         document.querySelector("#issuer").style.display = 'none';
-        document.querySelector("#issuers").innerHTML = "";
+        document.querySelector("#issuer").innerHTML = "";
 
         var selectorInstallments = document.querySelector("#installments"),
             fragment = document.createDocumentFragment(),
@@ -55,7 +55,6 @@ function setPaymentMethodInfo(status, response) {
             paymentMethod.setAttribute('name', "paymentMethodId");
             paymentMethod.setAttribute('type', "hidden");
             paymentMethod.setAttribute('value', response[0].id);
-
             form.appendChild(paymentMethod);
         } else {
             document.querySelector("input[name=paymentMethodId]").value = response[0].id;
@@ -88,26 +87,21 @@ function setPaymentMethodInfo(status, response) {
             }
         };
         if (issuerMandatory) {
-
             Mercadopago.getIssuers(response[0].id, showCardIssuers);
-
-            addEvent(document.querySelector('#issuers'), 'change', setInstallmentsByIssuerId);
-
+            addEvent(document.querySelector('#issuer'), 'change', setInstallmentsByIssuerId);
         } else {
             document.querySelector("#issuer").style.display = 'none';
-            document.querySelector("#issuers").options.length = 0;
+            document.querySelector("#issuer").options.length = 0;
         }
     }
 };
 
 function showCardIssuers(status, issuers) {
-    var issuersSelector = document.querySelector("#issuers"),
+    var issuersSelector = document.querySelector("#issuer"),
         fragment = document.createDocumentFragment();
 
     issuersSelector.options.length = 0;
-
     var option = new Option("Choose...", '-1');
-
     fragment.appendChild(option);
 
     for (var i = 0; i < issuers.length; i++) {
@@ -124,8 +118,8 @@ function showCardIssuers(status, issuers) {
 };
 
 function setInstallmentsByIssuerId(status, response) {
-    var issuerId = document.querySelector('#issuers').value,
-        amount = document.querySelector('input[data-checkout=amount]').value;;
+    var issuerId = document.querySelector('#issuer').value,
+        amount = document.querySelector('input[data-checkout=amount]').value;
 
     if (issuerId === '-1') {
         return;
@@ -149,7 +143,6 @@ function setInstallmentInfo(status, response) {
             payerCosts = response[0].payer_costs;
 
         fragment.appendChild(option);
-
         for (var i = 0; i < payerCosts.length; i++) {
             option = new Option(payerCosts[i].recommended_message, payerCosts[i].installments);
             fragment.appendChild(option);
@@ -176,11 +169,9 @@ function cardsHandler() {
         }
 
         var _bin = cardSelector[cardSelector.options.selectedIndex].getAttribute("first_six_digits");
-
         Mercadopago.getPaymentMethod({
             "bin": _bin
         }, setPaymentMethodInfo);
-
     } else {
         document.querySelector('#fullForm').style.display = "block";
         document.querySelector('#save').style.display = "block";
