@@ -14,12 +14,12 @@
 			"'dimensions':'30x30x30,500'"+
 		"}],"+
 		"'shipments':{"+
-	        "'mode':'me2',"+
-	        "'local_pickup':true,"+
-	        "'free_methods':["+
-	        	"{'id':100009}"+
-        	"]"+
-    	"}"+
+			"'mode':'me2',"+
+			"'local_pickup':true,"+
+			"'free_methods':["+
+				"{'id':100009}"+
+			"]"+
+		"}"+
 	"}";
 
 	JSONObject preference = mp.createPreference(preferenceData);
