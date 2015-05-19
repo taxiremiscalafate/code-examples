@@ -1,0 +1,32 @@
+<?php
+
+require_once "mercadopago.php";
+
+$mp = new MP("CLIENT_ID", "CLIENT_SECRET");
+
+$topic = $_GET["topic"];
+$merchant_order_info = null;
+
+switch ($topic) {
+    case 'payment':
+        $payment_info = $mp->get("/collections/notifications/" . $_GET["id"]);
+        $merchant_order_info = $mp->get("/merchant_orders/" . $payment_info["response"]["collection"]["merchant_order_id"]);
+        break;
+    case 'merchant_order':
+        $merchant_order_info = $mp->get("/merchant_orders/" . $_GET["id"]);
+        break;
+    default:
+        $merchant_order_info = null;
+}
+
+if($merchant_order_info == null) {
+    echo "Error obtaining the merchant_order";
+    die();
+}
+
+if ($merchant_order_info["status"] == 200) {
+    print_r($merchant_order_info["payments"]);
+    print_r($merchant_order_info["shipments"]);
+}
+
+?>
