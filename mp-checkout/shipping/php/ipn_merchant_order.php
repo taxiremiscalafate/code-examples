@@ -25,8 +25,8 @@ if($merchant_order_info == null) {
 }
 
 if ($merchant_order_info["status"] == 200) {
-    print_r($merchant_order_info["payments"]);
-    print_r($merchant_order_info["shipments"]);
+    print_r($merchant_order_info["response"]["payments"]);
+    print_r($merchant_order_info["response"]["shipments"]);
 }
 
 ?>
