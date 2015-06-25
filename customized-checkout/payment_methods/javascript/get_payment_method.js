@@ -1,3 +1,13 @@
+function addEvent(el, eventName, handler){
+    if (el.addEventListener) {
+           el.addEventListener(eventName, handler);
+    } else {
+        el.attachEvent('on' + eventName, function(){
+          handler.call(el);
+        });
+    }
+};
+
 function getBin() {
     var ccNumber = document.querySelector('input[data-checkout="cardNumber"]');
     return ccNumber.value.replace(/[ .-]/g, '').slice(0, 6);
