@@ -18,10 +18,10 @@
 	preference_obj("items")(Null)("quantity") = 1
 	preference_obj("items")(Null)("currency_id") = "CURRENCY_ID" ' Available currencies at: https://api.mercadopago.com/currencies
 	preference_obj("items")(Null)("unit_price") = 10.0
-	preference_obj("items")(Null)("dimensions") = "30x30x30,500"
 
 	Set preference_obj("shipments") = jsObject()
 	preference_obj("shipments")("mode") = "me2"
+	preference_obj("shipments")("dimensions") = "30x30x30,500"
 	preference_obj("shipments")("local_pickup") = true
 	Set preference_obj("shipments")("free_methods") = jsArray()
 	Set preference_obj("shipments")("free_methods")(Null) = jsObject()

@@ -9,12 +9,12 @@ $preference_data = array(
 			"title" => "Multicolor kite",
 			"quantity" => 1,
 			"currency_id" => "CURRENCY_ID", // Available currencies at: https://api.mercadopago.com/currencies
-			"unit_price" => 10.00,
-			"dimensions" => "30x30x30,500"
+			"unit_price" => 10.00
 		)
 	),
 	"shipments" => array(
 		"mode" => "me2",
+		"dimensions" => "30x30x30,500",
 		"local_pickup" => true,
 		"free_methods" => array(
 			array(
