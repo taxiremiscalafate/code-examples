@@ -25,7 +25,8 @@ function clearOptions() {
 }
 
 function guessingPaymentMethod(event) {
-    var bin = getBin();
+    var bin = getBin(),
+        amount = document.querySelector('#amount').value;
     if (event.type == "keyup") {
         if (bin.length == 6) {
             Mercadopago.getPaymentMethod({
@@ -62,13 +63,18 @@ function setPaymentMethodInfo(status, response) {
 
         // check if the security code (ex: Tarshop) is required
         var cardConfiguration = response[0].settings,
-            bin = getBin();
+            bin = getBin(),
+            amount = document.querySelector('#amount').value;
 
         for (var index = 0; index < cardConfiguration.length; index++) {
             if (bin.match(cardConfiguration[index].bin.pattern) != null && cardConfiguration[index].security_code.length == 0) {
-                document.querySelector("#cvv").style.display = "none";
+                /*
+                * In this case you do not need the Security code. You can hide the input.
+                */
             } else {
-                document.querySelector("#cvv").style.display = "block";
+                /*
+                * In this case you NEED the Security code. You MUST show the input.
+                */
             }
         }
 
@@ -119,7 +125,7 @@ function showCardIssuers(status, issuers) {
 
 function setInstallmentsByIssuerId(status, response) {
     var issuerId = document.querySelector('#issuer').value,
-        amount = document.querySelector('input[data-checkout=amount]').value;
+        amount = document.querySelector('#amount').value;
 
     if (issuerId === '-1') {
         return;
@@ -127,7 +133,7 @@ function setInstallmentsByIssuerId(status, response) {
 
     Mercadopago.getInstallments({
         "bin": getBin(),
-        "amount": parseFloat(amount),
+        "amount": amount,
         "issuer_id": issuerId
     }, setInstallmentInfo);
 };
@@ -144,7 +150,7 @@ function setInstallmentInfo(status, response) {
 
         fragment.appendChild(option);
         for (var i = 0; i < payerCosts.length; i++) {
-            option = new Option(payerCosts[i].recommended_message, payerCosts[i].installments);
+            option = new Option(payerCosts[i].recommended_message || payerCosts[i].installments, payerCosts[i].installments);
             fragment.appendChild(option);
         }
         selectorInstallments.appendChild(fragment);
@@ -155,26 +161,13 @@ function setInstallmentInfo(status, response) {
 function cardsHandler() {
     clearOptions();
     var cardSelector = document.querySelector("#cardId"),
-        amount = document.querySelector('input[data-checkout=amount]').value;
+        amount = document.querySelector('#amount').value;
 
-    if (cardSelector[cardSelector.options.selectedIndex].value != "-1") {
-        document.querySelector('#cardOptions').style.display = "block";
-        document.querySelector('#fullForm').style.display = "none";
-        document.querySelector('#save').style.display = "none";
-
-        if (cardSelector[cardSelector.options.selectedIndex].getAttribute('security_code_length') === 4) {
-            document.querySelector('input[data-checkout=securityCode]').setAttribute('placeholder', '1234');
-        } else {
-            document.querySelector('input[data-checkout=securityCode]').setAttribute('placeholder', '123');
-        }
-
+    if (cardSelector && cardSelector[cardSelector.options.selectedIndex].value != "-1") {
         var _bin = cardSelector[cardSelector.options.selectedIndex].getAttribute("first_six_digits");
         Mercadopago.getPaymentMethod({
             "bin": _bin
         }, setPaymentMethodInfo);
-    } else {
-        document.querySelector('#fullForm').style.display = "block";
-        document.querySelector('#save').style.display = "block";
     }
 }
 
