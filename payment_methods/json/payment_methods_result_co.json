@@ -1,0 +1,27 @@
+[
+    {
+        "id": "efecty",
+        "name": "Efecty",
+        "payment_type_id": "ticket",
+        "status": "active",
+        "secure_thumbnail": "https://www.mercadopago.com/org-img/MP3/API/logos/2011.gif",
+        "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/2011.gif",
+        "deferred_capture": "does_not_apply",
+        "settings": [],
+        "additional_info_needed": []
+    },
+    {
+        "id": "davivienda",
+        "name": "Davivienda",
+        "payment_type_id": "ticket",
+        "status": "active",
+        "secure_thumbnail": "https://www.mercadopago.com/org-img/MP3/API/logos/2012.gif",
+        "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/2012.gif",
+        "deferred_capture": "does_not_apply",
+        "settings": [],
+        "additional_info_needed": []
+    },
+    {
+        "...": "..."
+    }
+]

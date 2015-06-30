@@ -1,0 +1,27 @@
+[
+    {
+        "id": "provincial",
+        "name": "BBVA Provincial",
+        "payment_type_id": "ticket",
+        "status": "active",
+        "secure_thumbnail": "https://www.mercadopago.com/org-img/MP3/API/logos/2009.gif",
+        "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/2009.gif",
+        "deferred_capture": "does_not_apply",
+        "settings": [],
+        "additional_info_needed": []
+    },
+    {
+        "id": "mercantil",
+        "name": "Banco Mercantil",
+        "payment_type_id": "atm",
+        "status": "active",
+        "secure_thumbnail": "https://www.mercadopago.com/org-img/MP3/API/logos/2008.gif",
+        "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/2008.gif",
+        "deferred_capture": "does_not_apply",
+        "settings": [],
+        "additional_info_needed": []
+    },
+    {
+        "...": "..."
+    }
+]
