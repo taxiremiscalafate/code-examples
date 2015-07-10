@@ -8,7 +8,7 @@ paymentData = Hash[
 		"description'" => "Title of what you are paying for",
 		"installments'" => 1,
 		"payment_method_id'" => "visa",
-		"payer'" => Array[
+		"payer'" => Hash[
 			"email'" => "test_user_19653727@testuser.com"
 		]
 	]
