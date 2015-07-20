@@ -30,16 +30,14 @@ function guessingPaymentMethod(event) {
     if (event.type == "keyup") {
         if (bin.length == 6) {
             Mercadopago.getPaymentMethod({
-                "bin": bin,
-                "amount": amount
+                "bin": bin
             }, setPaymentMethodInfo);
         }
     } else {
         setTimeout(function() {
             if (bin.length >= 6) {
                 Mercadopago.getPaymentMethod({
-                    "bin": bin,
-                    "amount": amount
+                    "bin": bin
                 }, setPaymentMethodInfo);
             }
         }, 100);
