@@ -10,6 +10,6 @@ curl -X POST \
 		"payer": {
 			"id": "12345678"
 		},
-        "payment_method_id": "visa",
+		"payment_method_id": "visa",
 		"application_fee": 2.56
 	}'
