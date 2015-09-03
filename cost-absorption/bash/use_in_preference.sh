@@ -3,11 +3,11 @@ curl -X POST \
 -H "content-type: application/json" \
 "https://api.mercadopago.com/checkout/preferences?access_token=ACCESS_TOKEN" \
 -d '{
-	"items": [
-		...
-	],
-	...,
-	"differential_pricing": {
-		"id": 12345678945632100
-	}
+        "items": [
+                ...
+        ],
+        ...,
+        "differential_pricing": {
+                "id": 12345678945632100
+        }
 }'

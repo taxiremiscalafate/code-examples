@@ -5,7 +5,7 @@
 		"offset": 0
 	},
 	"results": [
-	   	{
+		{
 			"id": MOVEMENT_ID,
 			"user_id": USER_ID,
 			"type": "income",
