@@ -17,8 +17,10 @@
 			"'dimensions':'30x30x30,500',"+
 			"'local_pickup':true,"+
 			"'free_methods':["+
-				"{'id':100009}"+
-			"]"+
+				"{'id':SHIPPING_METHOD_ID}"+
+			"],"+
+			"'default_shipping_method':SHIPPING_METHOD_ID,"+
+			"'zip_code':ZIP_CODE"+
 		"}"+
 	"}";
 

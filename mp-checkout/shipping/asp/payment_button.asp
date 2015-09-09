@@ -25,7 +25,9 @@
 	preference_obj("shipments")("local_pickup") = true
 	Set preference_obj("shipments")("free_methods") = jsArray()
 	Set preference_obj("shipments")("free_methods")(Null) = jsObject()
-	preference_obj("shipments")("free_methods")(Null)("id") = 73328
+	preference_obj("shipments")("free_methods")(Null)("id") = SHIPPING_METHOD_ID
+	preference_obj("shipments")("default_shipping_method") = SHIPPING_METHOD_ID
+	preference_obj("shipments")("zip_code") = ZIP_CODE
 
 	preference_json =  preference_obj.jsString
 

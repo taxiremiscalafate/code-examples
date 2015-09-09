@@ -20,9 +20,11 @@ class Button
 				"local_pickup" => true,
 				"free_methods" => [
 					[
-						"id" => 100009
+						"id" => SHIPPING_METHOD_ID
 					]
-				]
+				],
+				"default_shipping_method" => SHIPPING_METHOD_ID,
+				"zip_code" => ZIP_CODE
 			]
 		}
 		preference = mp.create_preference(preferenceData)
