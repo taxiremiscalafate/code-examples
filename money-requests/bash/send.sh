@@ -1,6 +1,6 @@
 curl -X POST \
 -H "Content-Type: application/json" \
-'https://api.mercadolibre.com/money_requests?access_token=ACCESS_TOKEN' \
+'https://api.mercadopago.com/money_requests?access_token=ACCESS_TOKEN' \
 -d '{
     "currency_id" : "CURRENCY_ID",
     "payer_email" : "payer@email.com",
