@@ -24,7 +24,7 @@ class Button
 					]
 				],
 				"default_shipping_method" => SHIPPING_METHOD_ID,
-				"zip_code" => ZIP_CODE
+				"zip_code" => "ZIP_CODE"
 			]
 		}
 		preference = mp.create_preference(preferenceData)
