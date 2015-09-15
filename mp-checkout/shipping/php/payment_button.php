@@ -22,7 +22,7 @@ $preference_data = array(
 			)
 		),
 		"default_shipping_method" => SHIPPING_METHOD_ID,
-		"zip_code" => ZIP_CODE
+		"zip_code" => "ZIP_CODE"
 	)
 );
 
