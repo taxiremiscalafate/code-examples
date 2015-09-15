@@ -20,7 +20,7 @@ def index(req, **kwargs):
 				{"id": SHIPPING_METHOD_ID}
 			],
 			"default_shipping_method": SHIPPING_METHOD_ID,
-			"zip_code": ZIP_CODE
+			"zip_code": "ZIP_CODE"
 		}
 	}
 	mp = mercadopago.MP("CLIENT_ID", "CLIENT_SECRET")
