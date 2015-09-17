@@ -6,7 +6,7 @@
 			"currency_id": "CURRENCY_ID",
 			"picture_url": "https://www.mercadopago.com/org-img/MP3/home/logomp3.gif",
 			"description": "Item description",
-			"category_id": "electronics", // Available categories at https://api.mercadolibre.com/item_categories
+			"category_id": "art", // Available categories at https://api.mercadolibre.com/item_categories
 			"quantity": 1,
 			"unit_price": 100
 		}
