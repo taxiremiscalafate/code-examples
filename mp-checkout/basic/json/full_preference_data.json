@@ -2,7 +2,7 @@
 	"items": [
 		{
 			"id": "item-ID-1234",
-			"title": "Title of what you're paying for. It will be displayed in the payment process.",
+			"title": "Title of what you are paying for. It will be displayed in the payment process.",
 			"currency_id": "CURRENCY_ID",
 			"picture_url": "https://www.mercadopago.com/org-img/MP3/home/logomp3.gif",
 			"description": "Item description",

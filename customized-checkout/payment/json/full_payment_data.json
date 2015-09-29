@@ -18,7 +18,7 @@
 		"items": [
 			{
 				"id": "item-ID-1234",
-				"title": "Title of what you're paying for",
+				"title": "Title of what you are paying for",
 				"picture_url": "https://www.mercadopago.com/org-img/MP3/home/logomp3.gif",
 				"description": "Item description",
 				"category_id": "art", // Available categories at https://api.mercadopago.com/item_categories
