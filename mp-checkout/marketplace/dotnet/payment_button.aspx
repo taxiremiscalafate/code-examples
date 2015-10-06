@@ -5,16 +5,16 @@
 <%
 	MP mp = new MP("SELLER_AT"); <%-- seller access_token --%>
 	
-	String preferenceData = "{'items':"+
+	String preferenceData = "{\"items\":"+
 		"[{"+
-			"'title':'Item title',"+
-			"'description':'Description',"+
-			"'quantity':1,"+
-			"'unit_price':50,"+
-			"'currency_id':'CURRENCY_ID',"+
-			"'picture_url':'https://www.mercadopago.com/org-img/MP3/home/logomp3.gif'"+
+			"\"title\":\"Item title\","+
+			"\"description\":\"Description\","+
+			"\"quantity\":1,"+
+			"\"unit_price\":50,"+
+			"\"currency_id\":\"CURRENCY_ID\","+
+			"\"picture_url\":\"https://www.mercadopago.com/org-img/MP3/home/logomp3.gif\""+
 		"}],"+
-		"'marketplace_fee':2.29"+ <%-- fee to collect --%>
+		"\"marketplace_fee\":2.29"+ <%-- fee to collect --%>
 	"}";
 
 	Hashtable preference = mp.createPreference(preferenceData);    

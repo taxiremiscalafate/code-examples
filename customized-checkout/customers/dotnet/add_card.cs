@@ -12,7 +12,7 @@ public class MyClass {
 		Hashtable saved_customer = mp.get ("/v1/customers/search", filters);
 		Integer customer_id = saved_customer["response"]["id"];
 
-		Hashtable card = mp.post ("/v1/customers/"+customer_id+"/cards", "{'token': 'ff8080814c11e237014c1ff593b57b4d'}");
+		Hashtable card = mp.post ("/v1/customers/"+customer_id+"/cards", "{\"token\": \"ff8080814c11e237014c1ff593b57b4d\"}");
 
 		Console.WriteLine (card.ToString());
 	}
