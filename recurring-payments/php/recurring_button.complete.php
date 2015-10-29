@@ -4,8 +4,8 @@ require_once ('mercadopago.php');
 $mp = new MP('CLIENT_ID', 'CLIENT_SECRET');
 
 $preapproval_data = array(
-	"payer_email" => "my_customer@my_site.com",
-	"back_url" => "http://www.my_site.com",
+	"payer_email" => "my_customer@my-site.com",
+	"back_url" => "http://www.my-site.com",
 	"reason" => "Monthly subscription to premium package",
 	"external_reference" => "OP-1234",
 	"auto_recurring" => array(
