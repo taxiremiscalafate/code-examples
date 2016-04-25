@@ -6,6 +6,6 @@ $filters = Hash [
     "email" => "your.payer@email"
 ]
 
-$customer = $mp.get ("/v1/customers/search", $filters);
+$customer = $mp.get ("/v1/customers/search", $filters)
 
 puts ($customer)
