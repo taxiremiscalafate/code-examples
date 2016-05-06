@@ -1,4 +1,4 @@
-import mercadopago.MP;
+import com.mercadopago.MP;
 
 public class MyClass {
 	public static void main (String args[]) {

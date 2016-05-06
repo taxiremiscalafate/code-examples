@@ -3,7 +3,7 @@ import java.lang.StringBuilder;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
-import mercadopago.MP;
+import com.mercadopago.MP;
 
 import org.codehaus.jettison.json.JSONObject;
 

@@ -1,4 +1,4 @@
-import mercadopago.MP;
+import com.mercadopago.MP;
 import org.codehaus.jettison.json.JSONObject;
 import org.codehaus.jettison.json.JSONArray;
 
