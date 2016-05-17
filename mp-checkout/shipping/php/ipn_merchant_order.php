@@ -4,6 +4,11 @@ require_once "mercadopago.php";
 
 $mp = new MP("CLIENT_ID", "CLIENT_SECRET");
 
+if (!isset($_GET["id"], $_GET["topic"]) || !ctype_digit($_GET["id"])) {
+    http_response_code(400);
+    return;
+}
+
 $topic = $_GET["topic"];
 $merchant_order_info = null;
 

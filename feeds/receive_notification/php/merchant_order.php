@@ -3,6 +3,11 @@ require_once "mercadopago.php";
 
 $mp = new MP("CLIENT_ID", "CLIENT_SECRET");
 
+if (!isset($_GET["id"], $_GET["topic"]) || !ctype_digit($_GET["id"])) {
+	http_response_code(400);
+	return;
+}
+
 // Get the payment and the corresponding merchant_order reported by the IPN.
 if($_GET["topic"] == 'payment'){
 	$payment_info = $mp->get("/collections/notifications/" . $_GET["id"]);
