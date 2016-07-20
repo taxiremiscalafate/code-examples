@@ -1,0 +1,16 @@
+[
+    {
+        "id": "pagoefectivo_atm",
+        "name": "PagoEfectivo",
+        "payment_type_id": "ticket",
+        "status": "active",
+        "secure_thumbnail": "https://www.mercadopago.com/org-img/MP3/API/logos/pagoefectivo_atm.gif",
+        "thumbnail": "http://img.mlstatic.com/org-img/MP3/API/logos/pagoefectivo_atm.gif",
+        "deferred_capture": "does_not_apply",
+        "settings": [],
+        "additional_info_needed": []
+    },
+    {
+        "...": "..."
+    }
+]
